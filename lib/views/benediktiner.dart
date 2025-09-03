@@ -1,6 +1,6 @@
 //lib/views/benediktiner.dart
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:app_einsiedeln/I10n/app_localizations.dart';
 
 class Benediktiner extends StatelessWidget {
   final Color primaryColor = Color.fromRGBO(176, 148, 60, 1);
@@ -12,6 +12,8 @@ class Benediktiner extends StatelessWidget {
     'assets/images/kloster_profess.jpg',
     'assets/images/kloster_saint_sky.jpg'
   ];
+
+  Benediktiner({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +62,7 @@ class Benediktiner extends StatelessWidget {
   }
 
   Widget imageCard(String imagePath) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: Card(
         color: Colors.white, // Card with white background

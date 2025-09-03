@@ -2,12 +2,14 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:app_einsiedeln/services/tour_type_provider.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:app_einsiedeln/I10n/app_localizations.dart';
 import 'tour_location_detail_views.dart';
 import 'kloster_tour_outside.dart';
 
 class GuidedTourHome extends StatelessWidget {
   final Color accentColor = const Color.fromRGBO(176, 148, 60, 1);
+
+  const GuidedTourHome({super.key});
 
   @override
   Widget build(BuildContext context) {

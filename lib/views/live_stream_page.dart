@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 
 class LiveStreamPage extends StatelessWidget {
-  const LiveStreamPage({Key? key}) : super(key: key);
+  const LiveStreamPage({super.key});
 
   @override
   Widget build(BuildContext context) {

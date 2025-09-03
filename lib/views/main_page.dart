@@ -1,7 +1,7 @@
 // lib/views/main_page.dart
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:app_einsiedeln/I10n/app_localizations.dart';
 import 'package:app_einsiedeln/views/benediktiner.dart';
 import 'package:app_einsiedeln/views/wahlfahrt.dart';
 import 'package:app_einsiedeln/views/history.dart';
@@ -12,7 +12,7 @@ import 'install_instructions.dart'; // Import the popup widget
 class MainPage extends StatefulWidget {
   final VoidCallback onNavigateToGuidedTour;
 
-  MainPage({Key? key, required this.onNavigateToGuidedTour}) : super(key: key);
+  const MainPage({super.key, required this.onNavigateToGuidedTour});
 
   @override
   _MainPageState createState() => _MainPageState();
@@ -390,11 +390,11 @@ class AboutUsButton extends StatelessWidget {
   final VoidCallback onPressed;
 
   const AboutUsButton({
-    Key? key,
+    super.key,
     required this.label,
     required this.imagePath,
     required this.onPressed,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -2,9 +2,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:csv/csv.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:app_einsiedeln/I10n/app_localizations.dart';
 
 class AllTagImKloster extends StatefulWidget {
+  const AllTagImKloster({super.key});
+
   @override
   _AllTagImKlosterState createState() => _AllTagImKlosterState();
 }

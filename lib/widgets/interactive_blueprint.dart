@@ -2,12 +2,12 @@
 import 'package:flutter/material.dart';
 import 'package:app_einsiedeln/models/tour_location_csv.dart';
 import 'package:app_einsiedeln/widgets/location_details_popup.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:app_einsiedeln/I10n/app_localizations.dart';
 
 class InteractiveBlueprint extends StatelessWidget {
   final List<TourLocation> locations;
 
-  InteractiveBlueprint({Key? key, required this.locations}) : super(key: key);
+  InteractiveBlueprint({super.key, required this.locations});
 
   final double originalImageWidth = 442.0;
   final double originalImageHeight = 734.0;
@@ -123,7 +123,7 @@ class InteractiveBlueprint extends StatelessWidget {
                             ),
                           ],
                         );
-                      }).toList(),
+                      }),
                       // Visitor Entrance text at the bottom left of the floorplan
                       Positioned(
                         left: 30,

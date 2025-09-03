@@ -2,7 +2,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:app_einsiedeln/I10n/app_localizations.dart';
 import 'package:csv/csv.dart';
 
 /// A simple data model for each tour location.
@@ -40,7 +40,7 @@ class TourLocation {
 }
 
 class TourOutside extends StatefulWidget {
-  const TourOutside({Key? key}) : super(key: key);
+  const TourOutside({super.key});
 
   @override
   _TourOutsideState createState() => _TourOutsideState();
@@ -261,7 +261,7 @@ class _TourOutsideState extends State<TourOutside> {
                                       ),
                                     ),
                                   );
-                                }).toList(),
+                                }),
                               ],
                             );
                           },

@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:app_einsiedeln/models/tour_location_csv.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:app_einsiedeln/I10n/app_localizations.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:app_einsiedeln/services/tour_type_provider.dart';
@@ -104,7 +104,7 @@ void showLocationDetails(BuildContext context, TourLocation location) {
                               Text(appLoc.spiritualTour),
                               Switch(
                                 value: showHistorical,
-                                activeColor: const Color.fromRGBO(176, 148, 60, 1),
+                                activeThumbColor: const Color.fromRGBO(176, 148, 60, 1),
                                 onChanged: (val) {
                                   setState(() {
                                     showHistorical = val;

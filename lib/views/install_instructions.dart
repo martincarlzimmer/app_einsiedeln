@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 class InstallInstructions extends StatelessWidget {
-  const InstallInstructions({Key? key}) : super(key: key);
+  const InstallInstructions({super.key});
 
   @override
   Widget build(BuildContext context) {

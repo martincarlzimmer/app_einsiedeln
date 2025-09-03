@@ -1,6 +1,6 @@
 //lib/views/wahlfahrt.dart
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:app_einsiedeln/I10n/app_localizations.dart';
 
 class Wahlfahrt extends StatelessWidget {
   final Color primaryColor = Color.fromRGBO(176, 148, 60, 1);
@@ -8,6 +8,8 @@ class Wahlfahrt extends StatelessWidget {
   final List<String> images = [
     'assets/images/01_Gnadenkapelle-010.jpg', // Add image paths as needed
   ];
+
+  Wahlfahrt({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +51,7 @@ class Wahlfahrt extends StatelessWidget {
   }
 
   Widget imageCard(String imagePath) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: Card(
         color: Colors.white, // Card with white background

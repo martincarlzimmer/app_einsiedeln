@@ -13,6 +13,8 @@ import '/services/locale_provider.dart';
 
 
 class AppShell extends StatefulWidget {
+  const AppShell({super.key});
+
   @override
   _AppShellState createState() => _AppShellState();
 }

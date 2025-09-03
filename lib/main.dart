@@ -21,7 +21,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart'; // Provides state management capabilities.
 import 'package:flutter_localizations/flutter_localizations.dart'; // Supports localization.
-import 'package:flutter_gen/gen_l10n/app_localizations.dart'; // Generated localization delegates.
+
+import 'package:app_einsiedeln/I10n/app_localizations.dart';
 
 import '/views/app_shell.dart'; // Main widget that builds the app shell.
 import '/services/locale_provider.dart'; // Manages the current locale/language.
@@ -43,7 +44,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
