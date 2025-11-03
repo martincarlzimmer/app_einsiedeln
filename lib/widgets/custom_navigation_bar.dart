@@ -36,57 +36,61 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
           ),
         ],
       ),
-      child: BottomNavigationBar(
-        currentIndex: widget.selectedIndex,
-        onTap: widget.onItemTapped,
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: Color.fromRGBO(176, 148, 60, 1),
-        unselectedItemColor: Colors.black,
-        selectedLabelStyle: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
-        unselectedLabelStyle: TextStyle(fontSize: 10),
-        backgroundColor: Colors.white,
-        items: [
-          BottomNavigationBarItem(
-            icon: Padding(
-              padding: const EdgeInsets.only(top: 5), // **Moves icon slightly higher**
-              child: Icon(Icons.home),
-            ),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Padding(
-              padding: const EdgeInsets.only(top: 5),
-              child: Icon(Icons.event),
-            ),
-            label: appLoc.eventsCalendar,
-          ),
-          BottomNavigationBarItem(
-            icon: Padding(
-              padding: const EdgeInsets.only(top: 5),
-              child: Icon(Icons.live_tv),
-            ),
-            label: appLoc.liveStream,
-          ),
-          BottomNavigationBarItem(
-            icon: Padding(
-              padding: const EdgeInsets.only(top: 5),
-              child: Icon(Icons.mail_outline),
-            ),
-            label: appLoc.newsLetter,
-          ),
-          BottomNavigationBarItem(
-            icon: Padding(
-              padding: const EdgeInsets.only(top: 5),
-              child: Icon(Icons.map),
-            ),
-            label: appLoc.selfGuidedTour,
-          ),
-          BottomNavigationBarItem(
-            icon: Padding(
-              padding: const EdgeInsets.only(top: 5),
-              child: Icon(Icons.shopping_cart),
-            ),
-            label: appLoc.onlineShop,
+      child: Wrap(
+        children: [
+          BottomNavigationBar(
+            currentIndex: widget.selectedIndex,
+            onTap: widget.onItemTapped,
+            type: BottomNavigationBarType.fixed,
+            selectedItemColor: Color.fromRGBO(176, 148, 60, 1),
+            unselectedItemColor: Colors.black,
+            selectedLabelStyle: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+            unselectedLabelStyle: TextStyle(fontSize: 10),
+            backgroundColor: Colors.white,
+            items: [
+              BottomNavigationBarItem(
+                icon: Padding(
+                  padding: const EdgeInsets.only(top: 5), // **Moves icon slightly higher**
+                  child: Icon(Icons.home),
+                ),
+                label: 'Home',
+              ),
+              BottomNavigationBarItem(
+                icon: Padding(
+                  padding: const EdgeInsets.only(top: 5),
+                  child: Icon(Icons.event),
+                ),
+                label: appLoc.eventsCalendar,
+              ),
+              BottomNavigationBarItem(
+                icon: Padding(
+                  padding: const EdgeInsets.only(top: 5),
+                  child: Icon(Icons.live_tv),
+                ),
+                label: appLoc.liveStream,
+              ),
+              BottomNavigationBarItem(
+                icon: Padding(
+                  padding: const EdgeInsets.only(top: 5),
+                  child: Icon(Icons.mail_outline),
+                ),
+                label: appLoc.newsLetter,
+              ),
+              BottomNavigationBarItem(
+                icon: Padding(
+                  padding: const EdgeInsets.only(top: 5),
+                  child: Icon(Icons.map),
+                ),
+                label: appLoc.selfGuidedTour,
+              ),
+              BottomNavigationBarItem(
+                icon: Padding(
+                  padding: const EdgeInsets.only(top: 5),
+                  child: Icon(Icons.shopping_cart),
+                ),
+                label: appLoc.onlineShop,
+              ),
+            ],
           ),
         ],
       ),
