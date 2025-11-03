@@ -83,7 +83,7 @@ class MyApp extends StatelessWidget {
         // If no match is found, use the first supported locale.
         return supportedLocales.first;
       },
-
+      debugShowCheckedModeBanner: false,
       // Set the home widget of the app.
       home: AppShell(),
     );
