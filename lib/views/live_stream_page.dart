@@ -1,10 +1,13 @@
 //lib/views/live_stream_page.dart
 import 'package:flutter/material.dart';
-import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class LiveStreamPage extends StatelessWidget {
-  const LiveStreamPage({super.key});
-
+  LiveStreamPage({super.key});
+  final YoutubePlayerController _controller = YoutubePlayerController(
+    initialVideoId: 'BPk4BGhJyHg',
+    flags: YoutubePlayerFlags(autoPlay: false, isLive: true),
+  );
   @override
   Widget build(BuildContext context) {
     return OrientationBuilder(
@@ -15,29 +18,20 @@ class LiveStreamPage extends StatelessWidget {
 
         // Determine the size of the video based on orientation
         double videoWidth = screenWidth;
-        double videoHeight = isLandscape ? screenHeight : screenHeight * 0.56; // typical aspect ratio for videos
+        double videoHeight = isLandscape
+            ? screenHeight
+            : screenHeight * 0.56; // typical aspect ratio for videos
 
         return Scaffold(
           body: Container(
             color: Colors.black,
             alignment: isLandscape ? Alignment.center : Alignment.topCenter,
             child: SizedBox(
-              width: videoWidth,
-              height: videoHeight,
-              child: HtmlWidget(
-                '''
-                  <iframe 
-                    src="https://cust-kloster-einsiedeln-front-9b2d91cc913e.herokuapp.com/embed" 
-                    width="100%"
-                    height="100%"
-                    frameborder="0" 
-                    allow="autoplay; encrypted-media; fullscreen"
-                    allowfullscreen
-                    style="border-radius: 0px;"
-                  ></iframe>
-                ''',
-              ),
-            ),
+                width: videoWidth,
+                height: videoHeight,
+                child: YoutubePlayer(
+                  controller: _controller,
+                )),
           ),
         );
       },
